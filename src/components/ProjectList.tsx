@@ -43,7 +43,6 @@ function ProjectList() {
                         modifier: 1,
                         slideShadows: true
                     }}
-                    navigation
                     slideToClickedSlide={true}
                     pagination={{ el: '.swiper-pagination', clickable: true }}
                     modules={[EffectCoverflow, Pagination, Navigation]}
