@@ -1,4 +1,3 @@
-import Modal from "../components/Modal";
 import { projectList } from "../data/projectList";
 
 export default function ProjectDetails(props: Details) {
@@ -7,16 +6,13 @@ export default function ProjectDetails(props: Details) {
 
     if (!project) {
         return (
-            <Modal>
-                <h1>Project not found</h1>
-            </Modal>
+            <h1>Project not found</h1>
+
         )
     }
 
     return (
-        <Modal>
-            <h1>{project.title}</h1>
-        </Modal>
+        <h1>{project.title}</h1>
     )
 }
 
