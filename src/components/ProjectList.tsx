@@ -9,13 +9,11 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/scrollbar'
 
-// import { Link } from "react-router-dom";
-
 function ProjectList() {
 
     const projects = projectList.map((project) => {
         return (
-            <SwiperSlide>
+            <SwiperSlide className={styles.slide}>
                 <Project
                     key={project.id}
                     title={project.title}
@@ -28,28 +26,29 @@ function ProjectList() {
     })
 
     return (
-        <Swiper
-            effect={'coverflow'}
-            grabCursor={true}
-            centeredSlides={true}
-            loop={false}
-            slidesPerView={'auto'}
-            coverflowEffect={{
-                rotate: 0,
-                stretch: 0,
-                depth: 100,
-                modifier: 2.5
-            }}
-            pagination={{ el: '.swiper-pagination', clickable: true }}
-            navigation
-            scrollbar={{ draggable: true }}
-            modules={[EffectCoverflow, Pagination, Navigation]}
-            className="swiper_container"
-        >
-            <ul className={styles.projectList}>
-                {projects}
-            </ul>
-        </Swiper>
+        <>
+            <h1>Projects</h1>
+            <div className={styles.swiperContainer}>
+                <Swiper
+                    effect={'coverflow'}
+                    grabCursor={true}
+                    centeredSlides={true}
+                    loop={false}
+                    slidesPerView={5}
+                    coverflowEffect={{
+                        rotate: 0,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1
+                    }}
+                    pagination={{ el: '.swiper-pagination', clickable: true }}
+                    modules={[EffectCoverflow, Pagination, Navigation]}
+                    className='swiper-container'
+                >
+                    {projects}
+                </Swiper>
+            </div>
+        </>
     )
 }
 

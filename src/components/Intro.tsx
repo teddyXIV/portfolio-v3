@@ -1,6 +1,8 @@
 function Intro() {
     return (
-        <h1>Teddy Peterschmidt</h1>
+        <div>
+            <h1>Teddy Peterschmidt</h1>
+        </div>
     )
 }
 
