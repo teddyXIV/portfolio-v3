@@ -1,13 +1,9 @@
-.projectList {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    /* list-style: none;
-    max-width: 50rem;
-    margin: 1rem auto;
-    padding: 1rem 0; */
-    /* display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(3, 30%);
-    justify-content: center; */
+.slide {
+    width: 20%;
+    border-radius: 20px;
+}
+
+.swiperContainer {
+    width: 75vw;
+    margin: auto;
 }

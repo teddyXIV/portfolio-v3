@@ -30,7 +30,7 @@ export const projectList: ProjectData[] = [
     },
     {
         title: "maxRUSH",
-        description: "A platformer game built in the Godot engine. Built with a team of developes using an agile development approach.",
+        description: "A platformer game built in the Godot engine using C# and GDScript. Built with a team of engineers using an agile development approach.",
         url: "https://github.com/teddyXIV/Max_Rush",
         image: maxRushPng,
         id: "maxrush"
