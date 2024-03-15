@@ -5,6 +5,5 @@
 
 .swiperContainer {
     width: 75vw;
-    /* margin-left: 25vw;
-    margin-right: 25vw; */
+    margin: auto;
 }

@@ -35,12 +35,16 @@ function ProjectList() {
                     centeredSlides={true}
                     loop={false}
                     slidesPerView={5}
+                    initialSlide={2}
                     coverflowEffect={{
                         rotate: 0,
                         stretch: 0,
                         depth: 100,
-                        modifier: 1
+                        modifier: 1,
+                        slideShadows: true
                     }}
+                    navigation
+                    slideToClickedSlide={true}
                     pagination={{ el: '.swiper-pagination', clickable: true }}
                     modules={[EffectCoverflow, Pagination, Navigation]}
                     className='swiper-container'
