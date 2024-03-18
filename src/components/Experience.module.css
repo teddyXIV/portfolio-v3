@@ -1,0 +1,17 @@
+.jobContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.years {
+    width: 20%;
+}
+
+.jobDescription {
+    width: 75%;
+    margin-left: 5%;
+}
+
+.jobSpacer {
+    height: 50px;
+}
