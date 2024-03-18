@@ -11,6 +11,7 @@ function App() {
       <NavBar />
       <div className={styles.content}>
         <Intro />
+        <div className={styles.spacer} />
         <ProjectList />
       </div>
     </>

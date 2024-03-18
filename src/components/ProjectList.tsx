@@ -27,7 +27,7 @@ function ProjectList() {
 
     return (
         <>
-            <div className={styles.projects}>
+            <div className={styles.projects} id="projects">
                 <h1>Projects</h1>
                 <div className={styles.swiperContainer}>
                     <Swiper
