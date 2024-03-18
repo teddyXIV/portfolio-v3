@@ -11,9 +11,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-image: radial-gradient(ellipse at top left, #7f50e4, #4c05d0); */
-  /* background-image: radial-gradient(ellipse at top left, #00452E, #000A06); */
-  background-image: radial-gradient(ellipse at top left, #006040, #000000);
+  background-image: radial-gradient(ellipse at top left, #003D29, #000000);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,16 +19,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-/* body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-} */
-
 body {
   min-height: 100vh;
+  margin: 0;
 }

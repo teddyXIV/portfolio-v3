@@ -1,15 +1,18 @@
 import Intro from './components/Intro';
 import ProjectList from './components/ProjectList';
-
-import './App.css'
+import NavBar from './components/NavBar';
+import styles from './App.module.css';
 
 function App() {
 
 
   return (
     <>
-      <Intro />
-      <ProjectList />
+      <NavBar />
+      <div className={styles.content}>
+        <Intro />
+        <ProjectList />
+      </div>
     </>
   )
 }

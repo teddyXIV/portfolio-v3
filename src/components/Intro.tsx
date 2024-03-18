@@ -4,7 +4,11 @@ function Intro() {
     return (
         <div className={styles.introContainer}>
             <h1 className={styles.name}>Teddy Peterschmidt</h1>
-            <h3>Full Stack Developer</h3>
+            <ul>
+                <li className={styles.sub2}>Full Stack Developer</li>
+                <li className={styles.sub2}>Former biologist</li>
+                <li className={styles.sub2}>Baseball fan</li>
+            </ul>
         </div>
     )
 }

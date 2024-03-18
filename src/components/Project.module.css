@@ -1,8 +1,9 @@
 .project {
     width: 25vw;
-    height: 35vh;
+    height: 40vh;
     margin: auto;
     border-radius: 8px;
+    border: 2px solid white;
     background-color: #003D29;
 }
 

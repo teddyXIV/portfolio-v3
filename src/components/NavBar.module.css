@@ -1,0 +1,22 @@
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: fit-content;
+    /* display: grid;
+    grid-template-columns: 1fr;
+    /* Only one column 
+    grid-auto-rows: minmax(0, auto); */
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    text-align: left;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin: 0;
+}
+
+.navBar a {
+    padding-top: 1rem;
+}

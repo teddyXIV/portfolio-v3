@@ -27,29 +27,31 @@ function ProjectList() {
 
     return (
         <>
-            <h1>Projects</h1>
-            <div className={styles.swiperContainer}>
-                <Swiper
-                    effect={'coverflow'}
-                    grabCursor={true}
-                    centeredSlides={true}
-                    loop={false}
-                    slidesPerView={5}
-                    initialSlide={2}
-                    coverflowEffect={{
-                        rotate: 0,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 1,
-                        slideShadows: true
-                    }}
-                    slideToClickedSlide={true}
-                    pagination={{ el: '.swiper-pagination', clickable: true }}
-                    modules={[EffectCoverflow, Pagination, Navigation]}
-                    className='swiper-container'
-                >
-                    {projects}
-                </Swiper>
+            <div className={styles.projects}>
+                <h1>Projects</h1>
+                <div className={styles.swiperContainer}>
+                    <Swiper
+                        effect={'coverflow'}
+                        grabCursor={true}
+                        centeredSlides={true}
+                        loop={false}
+                        slidesPerView={4}
+                        initialSlide={2}
+                        coverflowEffect={{
+                            rotate: 0,
+                            stretch: 0,
+                            depth: 100,
+                            modifier: 1,
+                            slideShadows: true
+                        }}
+                        slideToClickedSlide={true}
+                        pagination={{ el: '.swiper-pagination', clickable: true }}
+                        modules={[EffectCoverflow, Pagination, Navigation]}
+                        className='swiper-container'
+                    >
+                        {projects}
+                    </Swiper>
+                </div>
             </div>
         </>
     )

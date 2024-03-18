@@ -1,8 +1,17 @@
 .introContainer {
     margin-left: auto;
+    text-align: center;
 }
 
 .name {
-    font-size: 75px;
-    text-align: center;
+    font-size: 50px;
+}
+
+.sub2 {
+    font-size: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
