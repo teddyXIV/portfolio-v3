@@ -14,12 +14,12 @@ function NavBar() {
                 <Link to="projects"
                     spy={true}
                     smooth={true}
-                    offset={0}
+                    offset={-25}
                     duration={500} >Projects</Link>
                 <Link to="experience"
                     spy={true}
                     smooth={true}
-                    offset={50}
+                    offset={-25}
                     duration={500} >Experience</Link>
                 <a href="https://github.com/teddyXIV">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="auto" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">

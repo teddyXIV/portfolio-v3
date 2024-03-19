@@ -1,17 +1,17 @@
 .jobContainer {
-    display: flex;
-    flex-direction: row;
+    width: 50%;
+    margin-left: 50px;
 }
 
-.years {
+/* .years {
     width: 20%;
-}
+} */
 
-.jobDescription {
+/* .jobDescription {
     width: 75%;
     margin-left: 5%;
-}
+} */
 
-.jobSpacer {
+/* .jobSpacer {
     height: 50px;
-}
+} */

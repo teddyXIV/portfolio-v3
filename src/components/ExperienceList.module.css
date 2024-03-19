@@ -1,0 +1,14 @@
+.expList {
+    display: flex;
+    flex-direction: column;
+}
+
+.expList h2 {
+    text-align: center;
+}
+
+.job {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
