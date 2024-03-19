@@ -4,10 +4,6 @@
     left: 0;
     height: 100vh;
     width: fit-content;
-    /* display: grid;
-    grid-template-columns: 1fr;
-    /* Only one column 
-    grid-auto-rows: minmax(0, auto); */
     display: flex;
     flex-direction: column;
     background-color: #000000;
@@ -19,4 +15,8 @@
 
 .navBar a {
     padding-top: 1rem;
+}
+
+.link:hover {
+    cursor: pointer;
 }

@@ -41,7 +41,7 @@ function ProjectList() {
                             rotate: 0,
                             stretch: 0,
                             depth: 100,
-                            modifier: 1,
+                            modifier: 3,
                             slideShadows: true
                         }}
                         slideToClickedSlide={true}

@@ -1,18 +1,19 @@
 import { experienceList } from "../data/experienceList";
 import Experience from "./Experience";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShip, faWater, faFish, faTree, faBoxOpen } from '@fortawesome/free-solid-svg-icons'
+import { faShip, faWater, faFish, faTree, faBoxOpen, faCode, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './ExperienceList.module.css'
 
 function ExperienceList() {
 
     const iconArray = [
-        <FontAwesomeIcon icon={faBoxOpen} size='10x' />,
-        <FontAwesomeIcon icon={faFish} size='10x' />,
-        <FontAwesomeIcon icon={faTree} size='10x' />,
-        <FontAwesomeIcon icon={faWater} size='10x' />,
-        <FontAwesomeIcon icon={faShip} size='10x' />
+        <FontAwesomeIcon icon={faCode} size='7x' />,
+        <FontAwesomeIcon icon={faBoxOpen} size='7x' />,
+        <FontAwesomeIcon icon={faFish} size='7x' />,
+        <FontAwesomeIcon icon={faTree} size='7x' />,
+        <FontAwesomeIcon icon={faWater} size='7x' />,
+        <FontAwesomeIcon icon={faShip} size='7x' />
     ]
 
     const jobs = experienceList.map((job) => {
@@ -32,7 +33,8 @@ function ExperienceList() {
     })
     return (
         <div className={styles.expList} id="experience">
-            <h2>Experience</h2>
+            <h2>How I got here</h2>
+            <a className={styles.resume}><p >View my full resume here <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.icon} /></p></a>
             {jobs}
         </div>
     )

@@ -4,6 +4,7 @@
 }
 
 .expList h2 {
+    font-size: 40px;
     text-align: center;
 }
 
@@ -11,4 +12,9 @@
     display: flex;
     flex-direction: row;
     padding: 20px;
+}
+
+.resume {
+    width: 50%;
+    margin: auto;
 }

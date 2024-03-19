@@ -23,3 +23,16 @@ body {
   min-height: 100vh;
   margin: 0;
 }
+
+a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #56e39f;
+  transform: scale(1.04);
+}
