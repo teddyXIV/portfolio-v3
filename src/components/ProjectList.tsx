@@ -1,6 +1,4 @@
 import { projectList } from "../data/projectList";
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import Project from './Project';
 import styles from './ProjectList.module.css';
 import 'swiper/css';

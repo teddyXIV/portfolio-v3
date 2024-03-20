@@ -44,7 +44,7 @@ export const projectList: ProjectData[] = [
     },
     {
         title: "Currency Exchanger",
-        description: "An application that allows the user to enter a currency and convert it into another currency at the current exchange rate.",
+        description: "An application that allows the user to enter a currency and convert it into another currency at the current exchange rate via an API.",
         url: "https://github.com/teddyXIV/Currency-Exchanger",
         image: currencyEx,
         id: "currency-exchange"

@@ -21,3 +21,18 @@
 .icon {
     margin: auto;
 }
+
+.resume {
+    font-size: 25px;
+}
+
+.resume:hover {
+    color: #16DB65;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.resumeIcon {
+    padding: 0.5rem;
+    font-size: 20px;
+}

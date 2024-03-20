@@ -1,7 +1,7 @@
 import { experienceList } from "../data/experienceList";
 import Experience from "./Experience";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShip, faWater, faFish, faTree, faBoxOpen, faCode } from '@fortawesome/free-solid-svg-icons'
+import { faShip, faWater, faFish, faTree, faBoxOpen, faCode, faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 import styles from './ExperienceList.module.css'
 
@@ -34,6 +34,7 @@ function ExperienceList() {
     return (
         <div className={styles.expList} id="experience">
             <h2>How I got here</h2>
+            <a href="https://drive.google.com/file/d/1wqcdGCfGetbVF3lOg9xcjdNbRV3k_oNP/view?usp=sharing" target="_blanks" className={styles.resume}>Resume <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.resumeIcon} /></a>
             {jobs}
         </div>
     )

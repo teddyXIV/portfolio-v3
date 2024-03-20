@@ -1,7 +1,5 @@
 import styles from './Hero.module.css';
 import Socials from './Socials';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 
 function Hero() {
     return (
@@ -12,7 +10,7 @@ function Hero() {
                 <li className={styles.sub2}>Former biologist</li>
                 <li className={styles.sub2}>Baseball geek</li>
             </ul>
-            <a href="https://drive.google.com/file/d/1wqcdGCfGetbVF3lOg9xcjdNbRV3k_oNP/view?usp=sharing" target="_blanks" className={styles.resume}>Resume <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.icon} /></a>
+
             <Socials />
         </div>
     )
