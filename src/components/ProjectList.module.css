@@ -1,21 +1,8 @@
-/* .projects {
-    text-align: center;
-    align-items: center;
-} */
-
 .projects h2 {
+    margin-top: 0;
     font-size: 40px;
 }
 
-.slide {
-    /* width: 20%; */
-    border-radius: 20px;
+.swiperContainer {
+    padding: 4rem;
 }
-
-/* .swiperContainer {
-    width: 75vw;
-    margin: auto;
-    border: 3px solid white;
-    border-radius: 20px;
-    padding: 2rem;
-} */

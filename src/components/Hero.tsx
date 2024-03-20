@@ -10,9 +10,9 @@ function Hero() {
             <ul>
                 <li className={styles.sub2}>Full Stack Developer</li>
                 <li className={styles.sub2}>Former biologist</li>
-                <li className={styles.sub2}>Baseball fan</li>
+                <li className={styles.sub2}>Baseball geek</li>
             </ul>
-            <a className={styles.resume}>Resume <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.icon} /></a>
+            <a href="https://drive.google.com/file/d/1wqcdGCfGetbVF3lOg9xcjdNbRV3k_oNP/view?usp=sharing" target="_blanks" className={styles.resume}>Resume <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.icon} /></a>
             <Socials />
         </div>
     )

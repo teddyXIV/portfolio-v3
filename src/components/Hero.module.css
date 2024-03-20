@@ -1,5 +1,6 @@
 .name {
     font-size: 60px;
+    margin-top: 15%;
 }
 
 .sub2 {
@@ -9,4 +10,19 @@
 ul {
     list-style: none;
     padding: 0;
+}
+
+.resume {
+    font-size: 25px;
+}
+
+.resume:hover {
+    color: #16DB65;
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.icon {
+    padding: 0.5rem;
+    font-size: 20px;
 }

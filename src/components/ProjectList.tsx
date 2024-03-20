@@ -1,6 +1,6 @@
 import { projectList } from "../data/projectList";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
+// import { Swiper, SwiperSlide } from 'swiper/react';
+// import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import Project from './Project';
 import styles from './ProjectList.module.css';
 import 'swiper/css';
@@ -13,15 +13,15 @@ function ProjectList() {
 
     const projects = projectList.map((project) => {
         return (
-            <SwiperSlide className={styles.slide}>
-                <Project
-                    key={project.id}
-                    title={project.title}
-                    description={project.description}
-                    url={project.url}
-                    image={project.image}
-                    id={project.id} />
-            </SwiperSlide>
+
+            <Project
+                key={project.id}
+                title={project.title}
+                description={project.description}
+                url={project.url}
+                image={project.image}
+                id={project.id} />
+
         )
     })
 
@@ -29,29 +29,7 @@ function ProjectList() {
         <>
             <div className={styles.projects} id="projects">
                 <h2>Projects</h2>
-                <div className={styles.swiperContainer}>
-                    <Swiper
-                        effect={'coverflow'}
-                        grabCursor={true}
-                        centeredSlides={false}
-                        loop={true}
-                        slidesPerView={3}
-                        initialSlide={0}
-                        coverflowEffect={{
-                            rotate: 0,
-                            stretch: 0,
-                            depth: 100,
-                            modifier: 2,
-                            slideShadows: true
-                        }}
-                        slideToClickedSlide={true}
-                        pagination={{ el: '.swiper-pagination', clickable: true }}
-                        modules={[EffectCoverflow, Pagination, Navigation]}
-                        className='swiper-container'
-                    >
-                        {projects}
-                    </Swiper>
-                </div>
+                {projects}
             </div>
         </>
     )

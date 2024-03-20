@@ -21,7 +21,7 @@
 
 body {
   min-height: 100vh;
-  margin: 5%;
+  padding: 5%;
 }
 
 a {
@@ -29,10 +29,4 @@ a {
   display: flex;
   flex-direction: row;
   color: white;
-}
-
-a:hover {
-  cursor: pointer;
-  color: #8D73C4;
-  transform: scale(1.04);
 }

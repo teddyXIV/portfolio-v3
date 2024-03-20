@@ -6,15 +6,15 @@ import styles from './Project.module.css';
 function Project(props: ProjectData) {
     return (
         <div className={styles.project} key={props.id}>
-            <img src={props.image} alt={props.title} />
-            <div className={styles.title}>
-
-                <a href={props.url} target="_blank">
-                    <p>{props.title}<FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.icon} /></p>
-                </a>
-
-                <p>{props.description}</p>
-            </div>
+            <a href={props.url} target="_blank">
+                <div className={styles.projectContent}>
+                    <img src={props.image} alt={props.title} />
+                    <div>
+                        <p className={styles.title}>{props.title}<FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.icon} /></p>
+                        <p className={styles.description}>{props.description}</p>
+                    </div>
+                </div>
+            </a>
         </div>
     )
 }
