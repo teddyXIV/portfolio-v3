@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
-* {
+/* * {
   box-sizing: border-box
-}
+} */
 
 :root {
   font-family: Dm Sans;
@@ -11,7 +11,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-image: radial-gradient(ellipse at top left, #003D29, #000000);
+  background-image: radial-gradient(ellipse at top left, #003A32, #000000);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,7 +21,7 @@
 
 body {
   min-height: 100vh;
-  margin: 0;
+  margin: 5%;
 }
 
 a {
@@ -33,6 +33,6 @@ a {
 
 a:hover {
   cursor: pointer;
-  color: #56e39f;
+  color: #8D73C4;
   transform: scale(1.04);
 }

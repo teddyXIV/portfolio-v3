@@ -6,9 +6,24 @@
 } */
 
 .content {
-  padding-left: 100px;
+  display: flex;
+  flex-direction: row;
 }
 
-.spacer {
-  height: 1000px;
+.stuff {
+  width: 60%;
+  margin-left: 40%
+}
+
+/* .hero {
+  width: 40%;
+  position: fixed;
+} */
+
+.hero {
+  width: 40%;
+  position: fixed;
+  top: 0;
+
+  /* Add additional styles as needed */
 }

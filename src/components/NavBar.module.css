@@ -20,3 +20,15 @@
 .link:hover {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 767px) {
+    .navBar {
+        height: 10vh !important;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: row !important;
+        position: fixed !important;
+        bottom: 0 !important;
+        justify-content: space-between !important;
+    }
+}

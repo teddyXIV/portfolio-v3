@@ -5,7 +5,7 @@
 
 .expList h2 {
     font-size: 40px;
-    text-align: center;
+    /* text-align: center; */
 }
 
 .job {
@@ -14,7 +14,19 @@
     padding: 20px;
 }
 
-.resume {
-    width: 50%;
+/* .resume {
+    width: 75%;
     margin: auto;
+} */
+
+/* .expBlock {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+    margin: auto;
+} */
+
+.icon {
+    padding-top: 20px;
 }

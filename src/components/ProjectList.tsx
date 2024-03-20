@@ -33,15 +33,15 @@ function ProjectList() {
                     <Swiper
                         effect={'coverflow'}
                         grabCursor={true}
-                        centeredSlides={true}
-                        loop={false}
-                        slidesPerView={4}
-                        initialSlide={2}
+                        centeredSlides={false}
+                        loop={true}
+                        slidesPerView={3}
+                        initialSlide={0}
                         coverflowEffect={{
                             rotate: 0,
                             stretch: 0,
                             depth: 100,
-                            modifier: 3,
+                            modifier: 2,
                             slideShadows: true
                         }}
                         slideToClickedSlide={true}
