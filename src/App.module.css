@@ -15,6 +15,11 @@
   top: 0;
 }
 
+.navBar {
+  position: sticky;
+  top: 80px;
+}
+
 @media only screen and (max-width: 850px) {
   .content {
     flex-direction: column;

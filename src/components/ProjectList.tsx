@@ -21,7 +21,7 @@ function ProjectList() {
     return (
         <>
             <div className={styles.projects} id="projects">
-                <h2>Projects</h2>
+                {/* <h2>Projects</h2> */}
                 {projects}
             </div>
         </>

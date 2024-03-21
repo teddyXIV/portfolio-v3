@@ -33,7 +33,7 @@ function ExperienceList() {
     })
     return (
         <div className={styles.expList} id="experience">
-            <h2>How I got here</h2>
+            {/* <h2>How I got here</h2> */}
             <a href="https://drive.google.com/file/d/1wqcdGCfGetbVF3lOg9xcjdNbRV3k_oNP/view?usp=sharing" target="_blanks" className={styles.resume}>Resume <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.resumeIcon} /></a>
             {jobs}
         </div>
