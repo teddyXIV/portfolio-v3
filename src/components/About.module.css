@@ -1,0 +1,8 @@
+.aboutLink {
+    display: inline-block;
+    font-weight: bold;
+}
+
+.aboutLink:hover {
+    color: #16DB65;
+}

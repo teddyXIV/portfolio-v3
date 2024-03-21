@@ -23,25 +23,16 @@
 @media only screen and (max-width: 850px) {
   .content {
     flex-direction: column;
-    /* Stack components vertically */
   }
 
   .stuff {
     width: 100%;
-    /* Occupy full width */
     margin-left: 0;
-    /* No margin */
   }
 
   .hero {
     width: 100%;
-    /* Occupy full width */
     position: static;
-    /* Reset position */
-  }
 
-  .navBar {
-    display: none;
-    /* Hide NavBar on small screens */
   }
 }

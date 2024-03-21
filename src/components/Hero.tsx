@@ -5,11 +5,11 @@ function Hero() {
     return (
         <div className={styles.heroContainer} id="about">
             <h1 className={styles.name}>Teddy Peterschmidt</h1>
-            <ul>
+            {/* <ul>
                 <li className={styles.sub2}>Full Stack Developer</li>
                 <li className={styles.sub2}>Former biologist</li>
                 <li className={styles.sub2}>Baseball geek</li>
-            </ul>
+            </ul> */}
 
             <Socials />
         </div>

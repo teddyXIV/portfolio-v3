@@ -19,7 +19,7 @@ function ExperienceList() {
     const jobs = experienceList.map((job) => {
         return (
 
-            <div className={styles.job}>
+            <div className={styles.job} key={job.id}>
                 <div className={styles.iconContainer}>{iconArray[job.id]}</div>
                 <Experience
                     key={job.id}
@@ -33,7 +33,6 @@ function ExperienceList() {
     })
     return (
         <div className={styles.expList} id="experience">
-            {/* <h2>How I got here</h2> */}
             <a href="https://drive.google.com/file/d/1wqcdGCfGetbVF3lOg9xcjdNbRV3k_oNP/view?usp=sharing" target="_blanks" className={styles.resume}>Resume <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.resumeIcon} /></a>
             {jobs}
         </div>

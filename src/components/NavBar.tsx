@@ -23,21 +23,38 @@ function NavBar() {
     return (
         <>
             <h2 className={styles.navBar}>
-                <Link to="projects"
-                    className={scrollY < 812 ? styles.currentLoc : styles.link}
+                <Link to="info"
+                    className={scrollY < 330 ? styles.currentLoc : styles.link}
                     spy={true}
                     smooth={true}
                     offset={-100}
                     duration={500} >
-                    Projects |
+                    About
+                </Link>
+                <Link to="skills"
+                    className={scrollY >= 330 && scrollY < 634 ? styles.currentLoc : styles.link}
+                    spy={true}
+                    smooth={true}
+                    offset={-25}
+                    duration={500} >
+                    Skills
+                </Link>
+                <Link to="projects"
+                    className={scrollY >= 634 && scrollY < 1500 ? styles.currentLoc : styles.link}
+                    spy={true}
+                    smooth={true}
+                    offset={-25}
+                    duration={500} >
+                    Projects
                 </Link>
 
                 <Link to="experience"
-                    className={scrollY >= 812 ? styles.currentLoc : styles.link}
+                    className={scrollY >= 1500 ? styles.currentLoc : styles.link}
                     spy={true}
                     smooth={true}
-                    offset={-150}
-                    duration={500} > Experience
+                    offset={-25}
+                    duration={500} >
+                    Experience
                 </Link>
             </h2>
         </>
