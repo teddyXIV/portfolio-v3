@@ -1,17 +1,19 @@
 .jobContainer {
-    /* width: 75%; */
     margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
 }
 
-/* .years {
-    width: 20%;
-} */
+.icon {
+    max-height: 75px;
+    width: 50px;
+    height: auto;
+    margin: 60px 62px 0px 10px;
 
-/* .jobDescription {
-    width: 75%;
-    margin-left: 5%;
-} */
+}
 
-/* .jobSpacer {
-    height: 50px;
-} */
+.iconContainer {
+    width: 122px;
+}

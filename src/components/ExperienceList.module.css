@@ -22,8 +22,10 @@
     margin: auto;
 }
 
-.resume {
+.resume h3 {
+    margin: 0;
     font-size: 25px;
+    font-weight: bold;
 }
 
 .resume:hover {
@@ -33,6 +35,6 @@
 }
 
 .resumeIcon {
-    padding: 0.5rem;
-    font-size: 20px;
+    padding: 0.75rem 0.5rem 0.5rem 0.5rem;
+    font-size: 13px;
 }

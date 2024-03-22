@@ -3,13 +3,11 @@
     flex-wrap: wrap;
 }
 
-
-
 .skill {
     background-color: rgb(22, 219, 101);
     color: #003A32;
     border-radius: 35px;
-    padding: 5px;
+    padding: 5px 10px 5px 10px;
     margin-right: 10px;
     width: fit-content;
 }

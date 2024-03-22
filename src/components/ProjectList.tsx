@@ -1,6 +1,5 @@
 import { projectList } from "../data/projectList";
 import Project from './Project';
-import styles from './ProjectList.module.css';
 
 function ProjectList() {
 
@@ -20,8 +19,7 @@ function ProjectList() {
 
     return (
         <>
-            <div className={styles.projects} id="projects">
-                {/* <h2>Projects</h2> */}
+            <div id="projects">
                 {projects}
             </div>
         </>

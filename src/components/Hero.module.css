@@ -3,27 +3,3 @@
     margin-top: 15%;
     margin-bottom: 0;
 }
-
-.sub2 {
-    font-size: 30px;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-.resume {
-    font-size: 25px;
-}
-
-.resume:hover {
-    color: #16DB65;
-    transform: scale(1.02);
-    cursor: pointer;
-}
-
-.icon {
-    padding: 0.5rem;
-    font-size: 20px;
-}
