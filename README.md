@@ -8,3 +8,5 @@ Built with React + TypeScript + Vite
 * TypeScript
 * React
 * Vite
+
+[MIT License](./LICENSE)
