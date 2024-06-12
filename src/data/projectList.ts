@@ -1,5 +1,5 @@
 import maxRushPng from "../assets/maxRush.png";
-import currencyEx from "../assets/currencyEx.png";
+import salmon_sim from "../assets/salmon_sim.png";
 import invTracker from "../assets/invTracker.png";
 import mariners from '../assets/mariners.png';
 import factory from '../assets/factory.png';
@@ -14,6 +14,14 @@ export interface ProjectData {
 }
 
 export const projectList: ProjectData[] = [
+    {
+        title: "Salmon Simulation",
+        description: "React + TypeScript + Django web application created to visualize salmon migration up the Columbia River using real-world data.",
+        url: "https://github.com/teddyXIV/Salmon-Simulation",
+        image: salmon_sim,
+        id: "salmon"
+
+    },
     {
         title: "Factory",
         description: "An ASP.NET MVC web application to help a fictional factory manage engineers and machines.",
@@ -41,12 +49,5 @@ export const projectList: ProjectData[] = [
         url: "https://github.com/teddyXIV/MarinersAPI.Solution",
         image: mariners,
         id: "mariners-api"
-    },
-    {
-        title: "Currency Exchanger",
-        description: "An application that allows the user to enter a currency and convert it into another currency at the current exchange rate via an API.",
-        url: "https://github.com/teddyXIV/Currency-Exchanger",
-        image: currencyEx,
-        id: "currency-exchange"
     }
 ]
