@@ -22,12 +22,6 @@
     border: 1px solid #9da39a;
 }
 
-.project a {
-    text-decoration: none;
-    color: white;
-    margin-top: 0;
-}
-
 .title {
     margin: 0;
     font-size: 25px;
@@ -40,9 +34,15 @@
 }
 
 .icon {
-    padding-bottom: 0.25rem;
-    padding-left: 0.5rem;
+    padding-bottom: 0.1rem;
+    padding-left: 0.3rem;
     font-size: 13px;
+}
+
+
+.githubLink:hover {
+    color:  rgb(22, 219, 101);
+    cursor: pointer;
 }
 
 .explore:hover {

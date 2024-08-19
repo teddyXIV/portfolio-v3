@@ -49,15 +49,23 @@ function Project(props: ProjectData) {
                     <img src={props.image} alt={props.title} />
                     <div>
                         <p className={styles.title}>
-                            {props.title}<FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.icon} />
+                            {props.title}
                         </p>
                         <p className={styles.description}>
                             {props.description}
                         </p>
                         { expand && 
-                            <ul>
-                                {languageList}
-                            </ul>
+                            <>
+                                <ul>
+                                    {languageList}
+                                </ul>
+                                <a href={props.url} target='_blank' className={styles.githubLink}>
+                                    <p>
+                                        View on GitHub 
+                                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.icon} />
+                                    </p>
+                                </a>
+                            </>
                         }
                         <p className={styles.explore} onClick={() => setExpand(!expand)}>
                             { expand ? 'Close' : 'Explore' }
