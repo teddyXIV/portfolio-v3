@@ -44,3 +44,8 @@
     padding-left: 0.5rem;
     font-size: 13px;
 }
+
+.explore:hover {
+    color:  rgb(22, 219, 101);
+    cursor: pointer;
+}
