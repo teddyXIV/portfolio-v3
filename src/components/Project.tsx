@@ -3,13 +3,48 @@ import Modal from './Modal';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import styles from './Project.module.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Octokit } from "octokit";
 
 function Project(props: ProjectData) {
     const [expand, setExpand] = useState<boolean>(false)
+    const [languages, setLanguages] = useState<any>(null)
+
+    
+
+    const getLanguages = async () => {
+
+        const octokit = new Octokit({
+            auth: import.meta.env.VITE_GITHUB_KEY
+        })
+
+        try {
+            const response = await octokit.request('GET /repos/teddyxiv/{repo}/languages', {
+                repo: props.id
+            })
+            setLanguages(response.data)
+        } catch(error) {
+            console.log("Error getting data: ", error);
+        }
+    }
+    
+    useEffect(() => {
+        if(expand){
+            getLanguages();
+        }
+    }, [expand])
+
+    const languageList = languages ? Object.entries(languages as { [key: string]: string}).map(([key, value]) => {
+        return (
+            <li key={key}>
+                {key}: {value}
+            </li>
+        )
+    })
+    : null;
+
     return (
         <div className={styles.project} key={props.id}>
-            {/* <a href={props.url} target="_blank"> */}
                 <div className={styles.projectContent}>
                     <img src={props.image} alt={props.title} />
                     <div>
@@ -20,16 +55,15 @@ function Project(props: ProjectData) {
                             {props.description}
                         </p>
                         { expand && 
-                            <p>
-                                Github API results shown here!
-                            </p>
+                            <ul>
+                                {languageList}
+                            </ul>
                         }
                         <p className={styles.explore} onClick={() => setExpand(!expand)}>
-                            { !expand ? 'Explore' : 'Close' }
+                            { expand ? 'Close' : 'Explore' }
                         </p>
                     </div>
                 </div>
-            {/* </a> */}
         </div>
     )
 }
