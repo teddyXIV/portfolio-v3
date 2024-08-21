@@ -33,6 +33,11 @@
     flex-direction: row;
 }
 
+/* .projectDetails {
+    display: flex;
+    flex-direction: column;
+} */
+
 .icon {
     padding-bottom: 0.1rem;
     padding-left: 0.3rem;
@@ -43,9 +48,16 @@
 .githubLink:hover {
     color:  rgb(22, 219, 101);
     cursor: pointer;
+
 }
 
-.explore:hover {
+.viewDetails {
+    background: none;
+    border: none;
+    background-color: transparent;
+}
+
+.viewDetails:hover {
     color:  rgb(22, 219, 101);
     cursor: pointer;
 }
@@ -53,12 +65,12 @@
 .chartContainer {
     width: 75%;
     height: 75%;
-    /* background-color: rgb(157, 163, 154, 0.2); */
     background-color: rgb(22, 219, 101, 0.5);
-    padding: 5px 15px 5px 15px;
+    padding: 0px 15px 5px 15px;
     border-radius: 8px;
 }
 
-/* .charContainer h2 {
-    margin: auto;
-} */
+.chartContainer h2 {
+    padding: 7px 15px 5px 15px;
+    text-align: center;
+}

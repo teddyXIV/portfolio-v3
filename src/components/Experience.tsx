@@ -1,6 +1,6 @@
 import type { ExperienceInfo } from "../data/experienceList";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faShip, faWater, faFish, faTree, faBoxOpen, faCode } from '@fortawesome/free-solid-svg-icons'
+import { faShip, faWater, faFish, faTree, faBoxOpen, faCode, faGraduationCap } from '@fortawesome/free-solid-svg-icons'
 
 import styles from "./Experience.module.css";
 
@@ -12,7 +12,8 @@ function Experience(props: ExperienceInfo) {
         <FontAwesomeIcon icon={faFish} size='2x' className={styles.icon} />,
         <FontAwesomeIcon icon={faTree} size='2x' className={styles.icon} />,
         <FontAwesomeIcon icon={faWater} size='2x' className={styles.icon} />,
-        <FontAwesomeIcon icon={faShip} size='2x' className={styles.icon} />
+        <FontAwesomeIcon icon={faShip} size='2x' className={styles.icon} />,
+        <FontAwesomeIcon icon={faGraduationCap} size='2x' className={styles.icon} />
     ]
 
     return (

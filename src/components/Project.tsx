@@ -123,6 +123,7 @@ const Project = (props: ProjectData) => {
         <div className={styles.project} key={props.id}>
                 <div className={styles.projectContent}>
                     <img src={props.image} alt={props.title} />
+                    
                     <div>
                         <p className={styles.title}>
                             {props.title}
@@ -147,10 +148,27 @@ const Project = (props: ProjectData) => {
                                 </a>
                             </div>
                         }
-                        <p className={styles.explore} onClick={() => setExpand(!expand)}>
-                            { expand ? 'Close' : 'Explore' }
-                        </p>
+                        <button className={styles.viewDetails} onClick={() => setExpand(!expand)}>
+                            { expand ? 'Close' : 'View details' }
+                        </button>
                     </div>
+                    {/* { expand && 
+                            <div>
+                                { polarData?.labels?.length ? 
+                                    <LanguageChart
+                                        data={polarData}
+                                        options={options}
+                                    /> 
+                                    : <p>Loading...</p>}
+
+                                <a href={props.url} target='_blank' className={styles.githubLink}>
+                                    <p>
+                                        View on GitHub 
+                                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.icon} />
+                                    </p>
+                                </a>
+                            </div>
+                        } */}
                 </div>
         </div>
     )

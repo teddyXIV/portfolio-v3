@@ -8,11 +8,18 @@ export interface ExperienceInfo {
 
 export const experienceList: ExperienceInfo[] = [
     {
+        title: "Full stack developer",
+        company: "SignedPic",
+        description: "Develop reusable and dynamic React components for seamless interaction with a Django backend and create RESTful APIs. Conduct thorough end-to-end testing for reliability and performance. Built application for Gmail integration.",
+        years: "2024",
+        id: 0,
+    },
+    {
         title: "Full stack web development student",
         company: "Epicodus",
         description: "Learned the ins and outs of web development and gained proficiency JavaScript, React, and C#/.NET",
         years: "2023 - 2024",
-        id: 0,
+        id: 6,
     },
     {
         title: "Member experience specialist",
