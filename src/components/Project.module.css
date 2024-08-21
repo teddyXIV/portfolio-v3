@@ -15,17 +15,11 @@
 .project img {
     max-height: 75px;
     width: 100px;
-    height: auto;
+    height: 75px;
     margin-right: 20px;
     margin-top: 5px;
     border-radius: 7%;
     border: 1px solid #9da39a;
-}
-
-.project a {
-    text-decoration: none;
-    color: white;
-    margin-top: 0;
 }
 
 .title {
@@ -39,8 +33,46 @@
     flex-direction: row;
 }
 
+/* .projectDetails {
+    display: flex;
+    flex-direction: column;
+} */
+
 .icon {
-    padding-bottom: 0.25rem;
-    padding-left: 0.5rem;
+    padding-bottom: 0.1rem;
+    padding-left: 0.3rem;
     font-size: 13px;
+}
+
+
+.githubLink:hover {
+    color:  rgb(22, 219, 101);
+    cursor: pointer;
+
+}
+
+.viewDetails {
+    background: none;
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    padding: 0;
+}
+
+.viewDetails:hover {
+    color:  rgb(22, 219, 101);
+    cursor: pointer;
+}
+
+.chartContainer {
+    width: 75%;
+    height: 75%;
+    background-color: rgb(22, 219, 101, 0.5);
+    padding: 0px 15px 5px 15px;
+    border-radius: 8px;
+}
+
+.chartContainer h2 {
+    padding: 7px 15px 5px 15px;
+    text-align: center;
 }
