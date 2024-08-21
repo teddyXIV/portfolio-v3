@@ -30,21 +30,21 @@ import {
     ArcElement
 );
 
-function Project(props: ProjectData) {
+const Project = (props: ProjectData) => {
     const [expand, setExpand] = useState<boolean>(false)
     const [languages, setLanguages] = useState<string[]>([])
     const [usage, setUsage] = useState<number[]>([])
     const [polarData, setpolarData] = useState<ChartData<'polarArea'>>({
         labels: [],
         datasets: [{
-            label: "Languages Used",
+            label: "Language usage",
             data: [],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)'
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)'
             ],
             borderColor: [
                 'rgba(255, 99, 132, 1)',
@@ -56,17 +56,29 @@ function Project(props: ProjectData) {
             borderWidth: 1,
         }]
     })
-    // const options: ChartOptions<'polarArea'> = {
-    //     scales: {
-    //         r: {
-    //             angleLines: {
-    //                 display: false
-    //             },
-    //             suggestedMin: 50,
-    //             suggestedMax: 100
-    //         }
-    //     }
-    // };
+
+    const options: ChartOptions<'polarArea'> = {
+        scales: {
+            r: {
+                grid: {
+                    color: 'rgba(255, 255, 255, 0.5)'
+                },
+                pointLabels: {
+                    display: false
+                }
+            } 
+        },
+        plugins: {
+            legend: {
+                labels: {
+                    color: '#ffffff', // Set the font color for the legend labels
+                    font: {
+                        size: 14, // Optionally, you can set the font size
+                    }
+                }
+            }
+        }
+    };
 
     // const options: ChartOptions = {
     //     elements: {
@@ -87,7 +99,7 @@ function Project(props: ProjectData) {
             const response = await octokit.request('GET /repos/teddyxiv/{repo}/languages', {
                 repo: props.id
             })
-            // setLanguages(response.data)
+
             const data = response.data;
 
             const newLanguages: string[] = [];
@@ -96,8 +108,6 @@ function Project(props: ProjectData) {
             Object.entries(data as { [key: string]: number}).map(([key, value]) => {
                 newLanguages.push(key);
                 newUsage.push(value);
-                // setLanguages(prevLanguages => [...prevLanguages, key]);
-                // setUsage(prevUsage => [...prevUsage, value]);
             })
 
             setLanguages(newLanguages);
@@ -123,14 +133,6 @@ function Project(props: ProjectData) {
         }
     }, [expand, polarData])
 
-    // const languageList = languages.map((lang, index) => {
-    //     return (
-    //         <li key={index}>
-    //             {lang}
-    //         </li>
-    //     )
-    // });
-
     return (
         <div className={styles.project} key={props.id}>
                 <div className={styles.projectContent}>
@@ -143,17 +145,11 @@ function Project(props: ProjectData) {
                             {props.description}
                         </p>
                         { expand && 
-                            <>
-                                {/* <ul>
-                                    <li>Just</li>
-                                    <li>Some</li>
-                                    <li>Placeholder</li>
-                                    <li>Points</li>
-                                    {languageList}
-                                </ul> */}
+                            <div>
                                 { polarData?.labels?.length ? 
                                     <LanguageChart
                                         data={polarData}
+                                        options={options}
                                     /> 
                                     : <p>Loading...</p>}
 
@@ -163,7 +159,7 @@ function Project(props: ProjectData) {
                                         <FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.icon} />
                                     </p>
                                 </a>
-                            </>
+                            </div>
                         }
                         <p className={styles.explore} onClick={() => setExpand(!expand)}>
                             { expand ? 'Close' : 'Explore' }
@@ -176,12 +172,13 @@ function Project(props: ProjectData) {
 
 export default Project;
 
-const LanguageChart: React.FC<{data: ChartData<'polarArea'>}> = ({ data }) => {
+const LanguageChart = (props: { data: ChartData<'polarArea'>, options: ChartOptions<'polarArea'> }) => {
     return (
-        <div>
-            <h2>Language Usage</h2>
+        <div className={styles.chartContainer}>
+            <h2>Language breakdown</h2>
             <PolarArea 
-                data={data}
+                data={props.data}
+                options={props.options}
                 />
         </div>
     )

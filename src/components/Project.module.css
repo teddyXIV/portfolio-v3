@@ -49,3 +49,16 @@
     color:  rgb(22, 219, 101);
     cursor: pointer;
 }
+
+.chartContainer {
+    width: 75%;
+    height: 75%;
+    /* background-color: rgb(157, 163, 154, 0.2); */
+    background-color: rgb(22, 219, 101, 0.5);
+    padding: 5px 15px 5px 15px;
+    border-radius: 8px;
+}
+
+/* .charContainer h2 {
+    margin: auto;
+} */
