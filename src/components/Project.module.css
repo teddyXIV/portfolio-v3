@@ -15,7 +15,7 @@
 .project img {
     max-height: 75px;
     width: 100px;
-    height: auto;
+    height: 75px;
     margin-right: 20px;
     margin-top: 5px;
     border-radius: 7%;
@@ -55,6 +55,8 @@
     background: none;
     border: none;
     background-color: transparent;
+    font-size: 15px;
+    padding: 0;
 }
 
 .viewDetails:hover {

@@ -23,7 +23,7 @@ function ExperienceList() {
     })
     return (
         <div className={styles.expList} id="experience">
-            <a href="https://drive.google.com/file/d/15bA2BIX_u1lK70wMtpWa3_NMWVhWiXMB/view?usp=sharing" target="_blanks" className={styles.resume}><h3>Resume</h3><FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.resumeIcon} /></a>
+            <a href="../../Teddy_Peterschmidt_Resume.pdf" target="_blanks" className={styles.resume}><h3>Resume</h3><FontAwesomeIcon icon={faArrowUpRightFromSquare} className={styles.resumeIcon} /></a>
             {jobs}
         </div>
     )
