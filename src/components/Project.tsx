@@ -4,53 +4,69 @@ import { faArrowUpRightFromSquare } from '@fortawesome/free-solid-svg-icons'
 import styles from './Project.module.css';
 import { useEffect, useState } from "react";
 import { Octokit } from "octokit";
-import { Radar } from "react-chartjs-2";
+import { PolarArea } from "react-chartjs-2";
 import { 
     ChartOptions, 
     ChartData,
     Chart,
+    PolarAreaController,
     RadialLinearScale,
     PointElement,
     LineElement,
     Filler,
     Tooltip,
-    Legend
+    Legend,
+    ArcElement
  } from 'chart.js';
 
  Chart.register(
+    PolarAreaController,
     RadialLinearScale,
     PointElement,
     LineElement,
     Filler,
     Tooltip,
-    Legend
+    Legend,
+    ArcElement
 );
 
 function Project(props: ProjectData) {
     const [expand, setExpand] = useState<boolean>(false)
     const [languages, setLanguages] = useState<string[]>([])
     const [usage, setUsage] = useState<number[]>([])
-    const [radarData, setRadarData] = useState<ChartData<'radar'>>({
+    const [radarData, setRadarData] = useState<ChartData<'polarArea'>>({
         labels: [],
         datasets: [{
             label: "Languages Used",
             data: [],
-            backgroundColor: 'rgba(54, 162, 235, 0.2)',
-            borderColor: 'rgba(54, 162, 235, 1)',
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
             borderWidth: 1,
         }]
     })
-    const options: ChartOptions<'radar'> = {
-        scales: {
-            r: {
-                angleLines: {
-                    display: false
-                },
-                suggestedMin: 50,
-                suggestedMax: 100
-            }
-        }
-    };
+    // const options: ChartOptions<'polarArea'> = {
+    //     scales: {
+    //         r: {
+    //             angleLines: {
+    //                 display: false
+    //             },
+    //             suggestedMin: 50,
+    //             suggestedMax: 100
+    //         }
+    //     }
+    // };
 
     // const options: ChartOptions = {
     //     elements: {
@@ -74,10 +90,18 @@ function Project(props: ProjectData) {
             // setLanguages(response.data)
             const data = response.data;
 
+            const newLanguages: string[] = [];
+            const newUsage: number[] = [];
+
             Object.entries(data as { [key: string]: number}).map(([key, value]) => {
-                setLanguages(prevLanguages => [...prevLanguages, key]);
-                setUsage(prevUsage => [...prevUsage, value]);
+                newLanguages.push(key);
+                newUsage.push(value);
+                // setLanguages(prevLanguages => [...prevLanguages, key]);
+                // setUsage(prevUsage => [...prevUsage, value]);
             })
+
+            setLanguages(newLanguages);
+            setUsage(newUsage);
 
             setRadarData(prevState => ({
                 ...prevState,
@@ -97,15 +121,15 @@ function Project(props: ProjectData) {
         if(expand) {
             getLanguages();
         }
-    }, [expand])
+    }, [expand, radarData])
 
-    const languageList = languages.map((lang, index) => {
-        return (
-            <li key={index}>
-                {lang}
-            </li>
-        )
-    });
+    // const languageList = languages.map((lang, index) => {
+    //     return (
+    //         <li key={index}>
+    //             {lang}
+    //         </li>
+    //     )
+    // });
 
     return (
         <div className={styles.project} key={props.id}>
@@ -127,9 +151,9 @@ function Project(props: ProjectData) {
                                     <li>Points</li>
                                     {languageList}
                                 </ul> */}
-                                <LanguageRadar
+                                { radarData?.labels?.length ? <LanguageChart
                                     data={radarData}
-                                    options={options}/>
+                                /> : <p>Loading...</p>}
 
                                 <a href={props.url} target='_blank' className={styles.githubLink}>
                                     <p>
@@ -150,11 +174,11 @@ function Project(props: ProjectData) {
 
 export default Project;
 
-const LanguageRadar: React.FC<{data: ChartData<'radar'>, options: ChartOptions<'radar'>}> = ({ data, options }) => {
+const LanguageChart: React.FC<{data: ChartData<'polarArea'>}> = ({ data }) => {
     return (
         <div>
             <h2>Language Usage</h2>
-            <Radar 
+            <PolarArea 
                 data={data}
                 />
         </div>
