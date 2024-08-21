@@ -34,7 +34,7 @@ function Project(props: ProjectData) {
     const [expand, setExpand] = useState<boolean>(false)
     const [languages, setLanguages] = useState<string[]>([])
     const [usage, setUsage] = useState<number[]>([])
-    const [radarData, setRadarData] = useState<ChartData<'polarArea'>>({
+    const [polarData, setpolarData] = useState<ChartData<'polarArea'>>({
         labels: [],
         datasets: [{
             label: "Languages Used",
@@ -103,7 +103,7 @@ function Project(props: ProjectData) {
             setLanguages(newLanguages);
             setUsage(newUsage);
 
-            setRadarData(prevState => ({
+            setpolarData(prevState => ({
                 ...prevState,
                 labels: languages,
                 datasets: prevState.datasets.map(dataset => ({
@@ -121,7 +121,7 @@ function Project(props: ProjectData) {
         if(expand) {
             getLanguages();
         }
-    }, [expand, radarData])
+    }, [expand, polarData])
 
     // const languageList = languages.map((lang, index) => {
     //     return (
@@ -151,9 +151,11 @@ function Project(props: ProjectData) {
                                     <li>Points</li>
                                     {languageList}
                                 </ul> */}
-                                { radarData?.labels?.length ? <LanguageChart
-                                    data={radarData}
-                                /> : <p>Loading...</p>}
+                                { polarData?.labels?.length ? 
+                                    <LanguageChart
+                                        data={polarData}
+                                    /> 
+                                    : <p>Loading...</p>}
 
                                 <a href={props.url} target='_blank' className={styles.githubLink}>
                                     <p>
