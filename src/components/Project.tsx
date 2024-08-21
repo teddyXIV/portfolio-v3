@@ -31,31 +31,29 @@ import {
 );
 
 const Project = (props: ProjectData) => {
-    const [expand, setExpand] = useState<boolean>(false)
-    const [languages, setLanguages] = useState<string[]>([])
-    const [usage, setUsage] = useState<number[]>([])
-    const [polarData, setpolarData] = useState<ChartData<'polarArea'>>({
+    const [expand, setExpand] = useState<boolean>(false);
+    const [polarData, setPolarData] = useState<ChartData<'polarArea'>>({
         labels: [],
         datasets: [{
-            label: "Language usage",
+            label: "Total bytes",
             data: [],
             backgroundColor: [
-                'rgba(255, 99, 132, 0.5)',
-                'rgba(54, 162, 235, 0.5)',
-                'rgba(255, 206, 86, 0.5)',
-                'rgba(75, 192, 192, 0.5)',
-                'rgba(153, 102, 255, 0.5)'
+                'rgb(102, 51, 153, 0.75)',
+                'rgba(255, 165, 0, 0.75)',
+                'rgba(0, 191, 255, 0.75)',
+                'rgba(255, 0, 128, 0.75)',
+                'rgba(47, 79, 79, 0.75)'
             ],
             borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)'
+                'rgba(102, 51, 153, 1)',
+                'rgba(255, 165, 0, 1)',
+                'rgba(0, 191, 255, 1)',
+                'rgba(255, 0, 128, 1)',
+                'rgba(47, 79, 79, 1)'
             ],
             borderWidth: 1,
         }]
-    })
+    });
 
     const options: ChartOptions<'polarArea'> = {
         scales: {
@@ -71,23 +69,14 @@ const Project = (props: ProjectData) => {
         plugins: {
             legend: {
                 labels: {
-                    color: '#ffffff', // Set the font color for the legend labels
+                    color: '#ffffff', 
                     font: {
-                        size: 14, // Optionally, you can set the font size
+                        size: 14, 
                     }
                 }
             }
         }
     };
-
-    // const options: ChartOptions = {
-    //     elements: {
-    //         line: {
-    //             borderWidth: 3
-    //         }
-    //     }
-    //  }
-    
 
     const getLanguages = async () => {
 
@@ -110,22 +99,19 @@ const Project = (props: ProjectData) => {
                 newUsage.push(value);
             })
 
-            setLanguages(newLanguages);
-            setUsage(newUsage);
-
-            setpolarData(prevState => ({
+            setPolarData(prevState => ({
                 ...prevState,
-                labels: languages,
+                labels: newLanguages,
                 datasets: prevState.datasets.map(dataset => ({
                     ...dataset,
-                    data: usage
+                    data: newUsage
                 }))
             }))
 
         } catch(error) {
             console.log("Error getting data: ", error);
         }
-    }
+    };
     
     useEffect(() => {
         if(expand) {
